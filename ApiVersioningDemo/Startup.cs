@@ -24,6 +24,7 @@ namespace ApiVersioningDemo
         {
             services.AddApiVersioning(options =>
             {
+                options.ErrorResponses = new ApiVersioningErrorResponseProvider();
                 options.DefaultApiVersion = new ApiVersion(1, 0);
                 //options.AssumeDefaultVersionWhenUnspecified = true;
                 options.ReportApiVersions = true;
